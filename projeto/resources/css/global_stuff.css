@@ -1,0 +1,191 @@
+@media screen and (orientation: landscape) {
+    :root {
+    --font_body: 1.2vw;
+    --font_small: 1.6vw;
+    --font_medium: 2.1vw;
+    --font_large: 2.35vw;
+    --font_heading: 2.65vw;
+
+    --font_subtitle: 1.8vw;
+    --font_title: 5.35vw;
+    }
+
+    header {
+        margin-top: -0.5rem;
+    }
+}
+
+@media screen and (orientation: portrait) 
+{
+    :root {
+    --font_body: 2.4vh !important;
+    --font_small: 3.2vh !important;
+    --font_medium: 4.2vh !important;
+    --font_large: 4.7vh !important;
+    --font_heading: 5.3vh !important;
+
+    --font_subtitle: 3.6vh !important;
+    --font_title: 10.7vh !important;
+    }
+}
+
+body {
+    font: 75 var(--font_body) Rockwell;
+    height: 200vh;
+    color: rgb(244, 255, 244);
+}
+
+.logo-principal {
+    height: 8vh;
+    width: auto;
+}
+
+.centralizar-bloco {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.zoom-on-hover {
+    font-size: calc(initial + 2vh);
+}
+
+.botao-ativo {
+    background-color: #00ba7c;
+}
+
+.botao-inativo {
+    background-color: #008245;
+    transition: background-color 0.2s ease-in;
+}
+
+.botao-inativo:hover {
+    background-color: #00ae7d;
+}
+
+.bg-full-dark {
+    background-color: #111111 !important;
+}
+
+nav div.container-fluid {
+    justify-content: flex-end !important;
+    margin-right: 4vw !important;
+}
+
+.navbar-collapse {
+    flex-grow: 0 !important;
+}
+
+.logo-principal {
+    margin-left: 2vw;
+}
+
+.nav-link {
+    color: white !important;
+    vertical-align: middle;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 0.375vw;
+    margin-right: 0.375vw;
+}
+
+.nav-item.dropdown {
+    cursor: pointer;
+    transition: all 0.35s ease-in;
+}
+
+/* isso dá a ilusão do texto ser não-selecionável */
+.nav-item.dropdown ::selection {
+    background-color: transparent !important;
+    color: white !important;
+}
+
+.nav-item {
+    vertical-align: middle;
+    margin-top: 0.75vh;
+    margin-bottom: 0px;
+    margin-left: 0.375vw;
+    margin-right: 0.375vw;
+}
+
+nav div .dropdown .dropdown-menu {
+    animation-name: navbar-dropdown;
+    animation-timing-function: ease-in-out;
+    animation-duration: 0.4s;
+    margin-top: 0vh;
+}
+
+.dropdown-item {
+    height: 4.2vh;
+    padding-left: 9vh;
+    vertical-align: top;
+}
+
+.dropdown-item span {
+    font: 75 var(--font_body) Rockwell;
+    color: white;
+    transition: all 0.15s ease-in;
+}
+
+.dropdown-item:hover span {
+    color: black;
+    font-weight: bold;
+}
+
+.dropdown-item-icon {
+    float: left;
+    text-align: start;
+    margin-left: -7vh;
+    margin-right: 1.65vh;
+    height: 3.3vh; 
+    width: auto;
+    vertical-align: bottom !important;
+    padding: 0px;
+}
+
+@keyframes navbar-dropdown {
+    0% {
+        opacity: 0.1;
+        margin-top: -4vh;
+    }
+    100% {
+        opacity: 1;
+        margin-top: 0vh;
+    }
+}
+
+@font-face {
+    font-family: 'Rockwell';
+    src: url('recursos/fontes/Rockwell.woff') format('woff');
+}
+
+@font-face {
+    font-family: "Minecraft";
+    src: url('recursos/fontes/Minecraft.woff') format('woff');
+}
+
+@font-face {
+    font-family: "Trajan";
+    src: url('recursos/fontes/TrajanPro-Regular.woff') format('woff');
+}
+
+::-webkit-scrollbar {
+    width: 0.5vw;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: rgba(12, 12, 12, 0.75);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background-color: rgb(0, 195, 75, 0.75);
+    border-radius: 2rem;
+    transition: background-color 0.25s ease-in-out;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background-color: rgb(0, 195, 75, 1);
+}
